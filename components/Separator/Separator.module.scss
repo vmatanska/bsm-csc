@@ -1,0 +1,12 @@
+.is-style-wide { width: 100%; }
+//.isStyleDots {
+.is-style-dots {
+    &:before {
+        //color: red;
+        content: "·········";
+        font-family: serif;
+        font-size: 1.5em;
+        letter-spacing: 1em;
+        padding-left: 2em;
+    }
+}

@@ -1,0 +1,6 @@
+.max-w-5xl { max-width: 64rem/* 1024px */; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.grid { display: grid; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gap-5 { gap: 1.25rem/* 20px */; }
+.mb-10 { margin-bottom: 10px; }

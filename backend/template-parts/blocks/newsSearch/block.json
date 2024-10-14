@@ -1,0 +1,13 @@
+{
+    "name": "acf/newssearch",
+    "title": "News Search",
+    "description": "A widget to search for news",
+    "category": "widget",
+    "keywords": ["news search", "news", "news filter"],
+    "icon": "search",
+    "apiVersion": 2,
+    "acf": {
+        "renderTemplate": "./newsSearch.php",
+        "mode": "preview"
+    }
+}

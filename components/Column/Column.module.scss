@@ -1,0 +1,8 @@
+.column {
+    padding: 5rem 2rem;
+    //border: 10px solid pink;
+
+    @media (max-width: 768px) {
+        min-width: unset !important;
+    }
+}

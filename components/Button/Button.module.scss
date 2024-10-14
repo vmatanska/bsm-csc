@@ -1,0 +1,68 @@
+@import "_variables.scss";
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+
+
+
+
+.btnDef { 
+  cursor: pointer;   
+  width: max-content;
+  text-decoration: none;
+  //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  @include button($accent, $accent-2);
+}
+
+.btn-default { 
+  @extend .btnDef;
+}
+
+.btn-slightly-round { 
+  @extend .btnDef;
+  @include border-radius(5px);
+}
+
+.btn-slightly-round-shadow { 
+  @extend .btnDef;
+  @include border-radius(5px);
+  @include border-shadow();
+}
+
+.btn-round { 
+  @extend .btnDef;
+  @include border-radius(30px);
+}
+
+.btn-round-shadow { 
+  @extend .btnDef;
+  @include border-radius(30px);
+  @include border-shadow();
+}
+  
+.btn-warning {
+  @extend .btnDef;
+  color: $warning-red;
+  border: 1px solid $warning-red;
+
+  &:hover,
+  &:focus {
+    background-color: $warning-red;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+.btn-primary {
+  @extend .btnDef;
+  color: $accent-4;
+  border: 1px solid $accent-4;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: $accent-4;
+  }
+}

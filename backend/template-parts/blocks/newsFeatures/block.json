@@ -1,0 +1,14 @@
+{
+    "name": "acf/newsfeatures",
+    "title": "News Features",
+    "description": "A block to render news features",
+    "category": "design",
+    "keywords": ["news", "features"],
+    "icon": "star-filled",
+    "apiVersion": 2,
+    "acf": {
+        "renderTemplate": "./newsFeatures.php",
+        "mode": "preview",
+        "postTypes": ["news"]
+    }
+}

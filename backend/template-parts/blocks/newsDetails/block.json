@@ -1,0 +1,13 @@
+{
+    "name": "acf/newsdetails",
+    "title": "News Details",
+    "description": "News Details",
+    "category": "design",
+    "keywords": ["news", "Details"],
+    "icon": "button",
+    "apiVersion": 2,
+    "acf": {
+        "renderTemplate": "./newsDetails.php",
+        "mode": "preview"
+    }
+}

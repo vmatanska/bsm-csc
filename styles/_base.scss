@@ -1,0 +1,74 @@
+// Core Styles
+//@import "_variables.scss";
+
+html {
+    box-sizing: border-box;
+    
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 75%;
+    }
+}
+ 
+* {
+    box-sizing: border-box;
+}
+
+.text-center { text-align: center; }
+
+.max-w-5xl {
+    max-width: 64rem;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+body {
+    //--wp--preset--spacing--20: min(12px, 2vw);
+    //--wp--preset--spacing--30: min(40px, 4vw);
+    //background-color: #4c4c4c;
+    background-color: $background-color;
+    //font-family: $font-secondary;
+    //padding: 5%;
+    //margin: 0;
+    /*color: $font-color; //$color-grey-dark-2;
+    font-family: $font-body-ff;
+    font-size: $font-body-fs;
+    line-height: $font-body-lh;
+    font-weight: $font-body-fw;
+    letter-spacing: $font-body-ls;
+    text-transform: $font-body-tt;*/
+}
+
+/*h1 {
+    var(--font-h1-fs);
+}*/
+.font-h1 {
+    /*font-family: var(--font-h1-ff);
+    font-size: var(--font-h1-fs);
+    line-height: var(--font-h1-lh);
+    font-weight: var(--font-h1-fw);
+    letter-spacing: var(--font-h1-ls);
+    text-transform: var(--font-h1-tt);*/
+    font-family: $font-h1-ff;
+    font-size: $font-h1-fs;
+    line-height: $font-h1-lh;
+    font-weight: $font-h1-fw;
+    letter-spacing: $font-h1-ls;
+    text-transform: $font-h1-tt;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,93 @@
+/* Mixins */
+
+/* BUTTON */
+@mixin border-radius ($radius-size) {
+    border-radius: $radius-size;
+    -moz-border-radius: $radius-size;
+    -webkit-border-radius: $radius-size;
+    -ms-border-radius: $radius-size;
+  }
+  
+  @mixin border-shadow () {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: $font-size-md + 0.2;
+    border: 0;
+    //@include border-radius(5px);
+  }
+  
+  @mixin button ($accent, $secondary) {
+    @extend .btn;
+  
+    background-color: $secondary;
+    //color: $accent;
+    color: #ffffff;
+    //border: 1px solid $accent;
+  
+    &:hover,
+    &:focus {
+      background-color: $accent;
+      //color: $secondary;
+      color: #ffffff;
+      //border-color: $secondary;
+    }
+  }
+  
+  /* LINK */
+  @mixin link-accent-color ($color-accent) { 
+    color: $color-accent;
+    text-decoration: none;
+    transition: $color-accent .3s;
+  }
+  
+  @mixin link-basic-underline () {
+    text-decoration: underline;
+  }
+  
+  @mixin animated-underline-type ($color-accent, $underline-thickness, $animated-underline-transition-sec) { 
+    background: linear-gradient($color-accent 0 0) 
+                bottom left/
+                var(--underline-width, 0%) $underline-thickness
+                no-repeat !important;
+    //color: #f80;
+    display: inline-block !important;
+    //padding: 0.5em 0.2em;
+    text-decoration: none;
+    transition: background-size $animated-underline-transition-sec !important;
+    &:hover {
+      --underline-width: 100% !important;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  @mixin banerImage($name) {
+    $url:"../images/#{$name}.png";
+    background: url($url);
+  }
+  
+  @mixin background($imgpath/*,$position:0 0,$repeat: no-repeat*/) {
+    background-image: url("$imgpath");
+    /*background: {
+    background-image: $imgpath;
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }*/
+  }
+  /*.testing {
+    @include background('/my/img/path.png');
+  }*/
+  
+  @mixin center-block () {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }

@@ -1,0 +1,83 @@
+//@import "_variables.scss";
+.wrap {
+    //background-color: rgb(30, 41, 59);
+    background-color: #fff;
+    padding-left: 1.25rem/* 20px */;
+    padding-right: 1.25rem;
+    height: 4rem/* 64px */;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    color: #012346 !important;
+    display: flex;
+    border-bottom: 3px solid #012346;
+
+    .logo {
+        padding-top: 1rem/* 16px */;
+        padding-bottom: 1rem/* 16px */;
+        display: flex;
+        color: #e42624 ;
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+
+    .menuLinks a {
+        padding: 20px !important; font-size: 25px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .hover:hover {
+        opacity: 1;
+        background-color: #f2f2f2;
+        color: #e42624;
+        cursor: pointer;
+        position: relative;
+    }
+    .group:hover .group-hover\:block {
+        display: block;
+    }
+    .btn {
+        padding: 20px !important;
+        font-size: inherit !important;
+        //@include border-radius(5px);
+      }
+    .subMenuItems {
+        display: none;
+        
+        border: 0px solid yellow;
+        text-align: right;
+        //background-color: rgb(30, 41, 59);
+        color: #012346;
+        background-color:  rgb(234, 236, 241);
+        position: absolute;
+        right: 0;
+        top: 100%;
+        margin-top: -0.75rem/* -12px */;
+
+        a { 
+            padding-top: .75rem; padding-bottom: .75rem;
+            padding-left: 1.25rem/* 20px */;
+            padding-right: 1.25rem;
+        }
+    }
+
+    .cover {
+        border: 0px solid red;
+        /*position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;*/
+
+        .image {
+            object-fit: cover;
+        }
+    }
+}

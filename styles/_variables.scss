@@ -1,0 +1,44 @@
+$background-color: var(--background-color);
+
+$layout-wide-size: var(--wp--style--layout--wide-size);
+$layout-content-size: var(--wp--style--layout--content-size);
+
+/* Font H1 */
+$font-h1-ff: 'Rubik', sans-serif;
+$font-h1-fs: 3rem;
+$font-h1-lh: 3.5;
+$font-h1-fw: 700;
+$font-h1-ls: .2px;
+$font-h1-tt: uppercase;
+/* Font H2 */
+$font-h1-ff: 'Rubik', sans-serif;
+$font-h1-fs: 2.5rem;
+$font-h1-lh: 3rem;
+$font-h1-fw: 700;
+$font-h1-ls: .2rem;
+$font-h1-tt: uppercase;
+
+/* COLORS */
+$accent: #012346;
+$accent-2: #e42624;
+$accent-3: #d8613c;
+$accent-4: #B1DCFB;
+$accent-5: #f2f2f2;
+$base: #f9f9f9;
+$base-2: #ffffff;
+$contrast: #111111;
+$contrast-2: #636363;
+$contrast-3: #A4A4A4;
+$slate: #1E293B;
+$warning-red: #dc3545;
+
+// Fonts sizing
+$font-size-sm: 0.5rem;
+$font-size-md: 1rem;
+$font-size-lg: 2rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;   // 600px;

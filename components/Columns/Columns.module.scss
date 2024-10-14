@@ -1,0 +1,26 @@
+.columnsWrapper {
+    display: block; 
+    margin: 10px 0; 
+    //border: 3px solid green;
+
+    .block { 
+        display: block; 
+        margin: 10px 0; 
+        //border: 3px solid blue; 
+    }
+    
+    .contectColumns { 
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+        align-items: center;
+        //border: 5px solid red;
+    }
+
+    @media (max-width: 768px) {
+        .flex { display: flex; }
+        .contectColumns {
+            flex-direction: column;
+        }
+    }
+}

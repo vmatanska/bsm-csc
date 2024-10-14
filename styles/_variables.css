@@ -1,0 +1,191 @@
+:root {
+    --wp--preset--spacing--10: 0.63rem;
+    --wp--preset--spacing--20: 1rem;
+    --wp--preset--spacing--30: 1.25rem;
+    --wp--preset--spacing--40: 2.5rem;
+    --wp--preset--spacing--50: 5rem;
+    --wp--preset--spacing--60: 10rem;
+    --wp--preset--spacing--70: 20rem;
+    --wp--preset--spacing--80: 40rem;
+
+    --wp--style--layout--wide-size: 1580px;
+    --wp--style--layout--content-size: 1200px;
+    
+    
+    --theme-skin: light;
+  
+    --font-color: #000;
+    --link-color:#1C75B9;
+    --link-white-color:#fff;
+    --background-color: rgb(243,243,243);
+    --color-accent: #6a1b9a;
+    --color-primary: #f8bbd0;
+    --color-secondary: #0985fa;
+    --color-extra1: #2b2b2b;
+    --color-extra2: #2b2b2b;
+    --color-gradient-from: #f8bbd0;
+    --color-gradient-to: #0985fa;
+    --color: #2b2b2b;
+  
+    --btn-style: default;
+  
+    --link-style: default;
+    --underline-width: 0.1px;
+    --animated-underline-transition-sec: 0.01s;
+    --underline-thickness: 0.2rem;
+  
+    --column-spacing: 1rem;
+    --v-spacing: 1rem;
+  
+    /* Fonts */
+    --font-primary: 'Rubik', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    /*--helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  
+    /* General Settings - Typography-Navigation & Page Header */
+    /* Fonts Logo */
+    --font-logo-ff: 'Rubik', sans-serif;
+    --font-logo-fs: 4rem;
+    --font-logo-lh: 5.5;
+    --font-logo-fw: 700;
+    --font-logo-ls: .2;
+    --font-logo-tt: uppercase;
+    
+    /* Fonts Navigation */
+    --font-nav-ff: 'Rubik', sans-serif;
+    --font-nav-fs: 4rem;
+    --font-nav-lh: 5.5;
+    --font-nav-fw: 700;
+    --font-nav-ls: .2;
+    --font-nav-tt: uppercase;
+  
+    /* Fonts Page Heading */
+    --font-page-title-ff: 'Rubik', sans-serif;
+    --font-page-title-fs: 4rem;
+    --font-page-title-lh: 5.5;
+    --font-page-title-fw: 700;
+    --font-page-title-ls: .2;
+    --font-page-title-tt: uppercase;
+  
+    /* Fonts Page SubHeading */
+    --font-page-subtitle-ff: 'Rubik', sans-serif;
+    --font-page-subtitle-fs: 2rem;
+    --font-page-subtitle-lh: 3.5;
+    --font-page-subtitle-fw: 400;
+    --font-page-subtitle-ls: .2;
+    --font-page-subtitle-tt: uppercase;
+  
+    /* Fonts OffCanvas Navigation*/
+    --font-canvas-ff: 'Rubik', sans-serif;
+    --font-canvas-fs: 2rem;
+    --font-canvas-lh: 3.5;
+    --font-canvas-fw: 400;
+    --font-canvas-ls: .2;
+    --font-canvas-tt: uppercase;
+  
+    /* Fonts OffCanvasNavigation_DropdownDescriptionText*/
+    --font-canvas-dropdown-ff: 'Rubik', sans-serif;
+    --font-canvas-dropdown-fs: 2rem;
+    --font-canvas-dropdown-lh: 3.5;
+    --font-canvas-dropdown-fw: 400;
+    --font-canvas-dropdown-ls: .2;
+    --font-canvas-dropdown-tt: uppercase;
+  
+    /* General Settings - Typography-General HTML elements */
+    /* Font Body */
+    --font-body-ff: 'Poppins', sans-serif;
+    --font-body-fs: 1rem;
+    --font-body-lh: 1.3;
+    --font-body-fw: 300;
+    --font-body-ls: .1;
+    --font-body-tt: uppercase;
+  
+    /* Font H1 */
+    --font-h1-ff: 'Rubik', sans-serif;
+    --font-h1-fs: 3rem;
+    --font-h1-lh: 3.5rem;
+    --font-h1-fw: 700;
+    --font-h1-ls: .2rem;
+    --font-h1-tt: uppercase;
+  
+    /* Font H2 */
+    --font-h2-ff: 'Rubik', sans-serif;
+    --font-h2-fs: 2.5rem;
+    --font-h2-lh: 3rem;
+    --font-h2-fw: 700;
+    --font-h2-ls: .2rem;
+    --font-h2-tt: uppercase;
+  
+    /* Font H3 */
+    --font-h3-ff: 'Rubik', sans-serif;
+    --font-h3-fs: 2rem;
+    --font-h3-lh: 2.5;
+    --font-h3-fw: 700;
+    --font-h3-ls: .2;
+    --font-h3-tt: uppercase;
+    
+    /* Font H4 */
+    --font-h4-ff: 'Rubik', sans-serif;
+    --font-h4-fs: 1.5rem;
+    --font-h4-lh: 2;
+    --font-h4-fw: 700;
+    --font-h4-ls: .2;
+    --font-h4-tt: uppercase;
+  
+    /* Font H5 */
+    --font-h5-ff: 'Rubik', sans-serif;
+    --font-h5-fs: 1.4rem;
+    --font-h5-lh: 2;
+    --font-h5-fw: 700;
+    --font-h5-ls: .2;
+    --font-h5-tt: uppercase;
+    
+    /* Font H6 */
+    --font-h6-ff: 'Rubik', sans-serif;
+    --font-h6-fs: 1.3rem;
+    --font-h6-lh: 2;
+    --font-h6-fw: 700;
+    --font-h6-ls: .2;
+    --font-h6-tt: uppercase;
+    
+    /* Font Italic */
+    --font-italic-ff: 'Rubik', sans-serif;
+    --font-italic-fs: 1.3rem;
+    --font-italic-lh: 2;
+    --font-italic-fw: 700;
+    --font-italic-ls: .2;
+    --font-italic-tt: uppercase;
+  
+    /* Font Bold */
+    --font-bold-ff: 'Rubik', sans-serif;
+    --font-bold-fs: 1.3rem;
+    --font-bold-lh: 2;
+    --font-bold-fw: 700;
+    --font-bold-ls: .2;
+    --font-bold-tt: uppercase;
+  
+    /* Font FormLabels */
+    --font-form-labels-ff: 'Rubik', sans-serif;
+    --font-form-labels-fs: 1.3rem;
+    --font-form-labels-lh: 2;
+    --font-form-labels-fw: 700;
+    --font-form-labels-ls: .2;
+    --font-form-labels-tt: uppercase;
+  
+  }
+  
+  /* Dark theme */
+  html[data-theme="dark"] {
+  /*[data-theme="dark"] {*/
+      --font-color: #c1bfbd;
+      --link-color:#0a86da;
+      --link-white-color:#c1bfbd;
+      /*--background-color: #333;
+      --background-color-darker: color-mix(in srgb,var(--background-color),#000 15%); */
+      --background-color: lab(from var(--background-color) 10 10 10);  /*#333;*/
+      /* --background-color-darker: hsl(from var(--background-color) h s calc(l - 5%));
+      --background-color: hsl(from var(--background-color) h s calc(l - 10%)); */
+  
+      --color-primary-darker: hsl(from var(--color-primary) h s calc(l - 5%)); 
+      --color-primary-darkest: hsl(from var(--color-primary) h s calc(l - 10%)); 
+  }

@@ -1,0 +1,31 @@
+@import "_variables.scss";
+
+.card {
+    border: 2px solid $accent;
+    border-radius: 3%;
+    padding: 1.5rem;
+    display: block;
+    background-color: $accent-4;
+
+    &:hover {
+        background-color: $accent;
+        color: $base-2;
+    }
+
+    .image {
+        display: flex;
+        width: fit-content;
+    }
+
+    .info {
+        .date {
+            margin-top: 0.5rem;
+            font-size: 14px;
+        }
+        .title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+    }
+}

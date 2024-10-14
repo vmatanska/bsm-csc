@@ -1,0 +1,19 @@
+.filter {
+    /*display: flex; 
+    justify-content: space-evenly;*/
+    display: table;
+    width: 100%;
+    border: 2px solid #012346;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        input { margin: auto; }
+    }
+}
