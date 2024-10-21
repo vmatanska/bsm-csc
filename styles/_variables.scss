@@ -1,7 +1,88 @@
+/*:root {
+    --theme-skin: light;
+  
+    --font-color: #000;
+    --link-color:#1C75B9;
+    --link-white-color:#fff;
+    --background-color: rgb(243,243,243);
+    --color-accent: #6a1b9a;
+    --color-primary: #f8bbd0;
+    --color-secondary: #0985fa;
+    --color-extra1: #2b2b2b;
+    --color-extra2: #2b2b2b;
+    --color-gradient-from: #f8bbd0;
+    --color-gradient-to: #0985fa;
+    --color: #2b2b2b;
+  
+    --btn-style: default;
+  
+    --link-style: default;
+    --underline-width: 0.1px;
+    --animated-underline-transition-sec: 0.01s;
+    --underline-thickness: 0.2rem;
+  
+    --column-spacing: 1rem;
+    --v-spacing: 1rem;
+  
+    /* Fonts 
+    --font-primary: 'Rubik', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;*/
+    /*--helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  
+    /* General Settings - Typography-Navigation & Page Header */
+    /* Fonts Logo 
+    --font-logo-ff: 'Rubik', sans-serif;
+    --font-logo-fs: 4rem;
+    --font-logo-lh: 5.5;
+    --font-logo-fw: 700;
+    --font-logo-ls: .2;
+    --font-logo-tt: uppercase;*/
+    
+    /* Fonts Navigation 
+    --font-nav-ff: 'Rubik', sans-serif;
+    --font-nav-fs: 4rem;
+    --font-nav-lh: 5.5;
+    --font-nav-fw: 700;
+    --font-nav-ls: .2;
+    --font-nav-tt: uppercase;*/
+  
+    /* Fonts Page Heading 
+    --font-page-title-ff: 'Rubik', sans-serif;
+    --font-page-title-fs: 4rem;
+    --font-page-title-lh: 5.5;
+    --font-page-title-fw: 700;
+    --font-page-title-ls: .2;
+    --font-page-title-tt: uppercase;*/
+  
+    /* Fonts Page SubHeading 
+    --font-page-subtitle-ff: 'Rubik', sans-serif;
+    --font-page-subtitle-fs: 2rem;
+    --font-page-subtitle-lh: 3.5;
+    --font-page-subtitle-fw: 400;
+    --font-page-subtitle-ls: .2;
+    --font-page-subtitle-tt: uppercase;*/
+  
+    /* Fonts OffCanvas Navigation
+    --font-canvas-ff: 'Rubik', sans-serif;
+    --font-canvas-fs: 2rem;
+    --font-canvas-lh: 3.5;
+    --font-canvas-fw: 400;
+    --font-canvas-ls: .2;
+    --font-canvas-tt: uppercase;*/
+  
+    /* Fonts OffCanvasNavigation_DropdownDescriptionText*/
+    /*--font-canvas-dropdown-ff: 'Rubik', sans-serif;
+    --font-canvas-dropdown-fs: 2rem;
+    --font-canvas-dropdown-lh: 3.5;
+    --font-canvas-dropdown-fw: 400;
+    --font-canvas-dropdown-ls: .2;
+    --font-canvas-dropdown-tt: uppercase;*/
+//}
+    
 $background-color: var(--background-color);
 
-$layout-wide-size: var(--wp--style--layout--wide-size);
-$layout-content-size: var(--wp--style--layout--content-size);
+$layout-wide-size: 100%;    //var(--wp--style--layout--wide-size);
+$layout-content-size: 75%;   //var(--wp--style--layout--content-size);
 
 /* Font H1 */
 $font-h1-ff: 'Rubik', sans-serif;
@@ -32,6 +113,14 @@ $contrast-3: #A4A4A4;
 $slate: #1E293B;
 $warning-red: #dc3545;
 
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+$color-grey-dark-3: #2b2b2b;
+$light-blue: #007bff;
+
 // Fonts sizing
 $font-size-sm: 0.5rem;
 $font-size-md: 1rem;
@@ -42,3 +131,9 @@ $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;   // 600px;
+
+
+// Links
+$link-style: 0.1px; //var(--link-style);
+$animated-underline-transition-sec:  0.9s; //var(--animated-underline-transition-sec);
+$underline-thickness: 0.1rem;   //var(--underline-thickness);

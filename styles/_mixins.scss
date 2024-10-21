@@ -57,6 +57,7 @@
     //padding: 0.5em 0.2em;
     text-decoration: none;
     transition: background-size $animated-underline-transition-sec !important;
+    //transition: $color-accent 2s;
     &:hover {
       --underline-width: 100% !important;
     }

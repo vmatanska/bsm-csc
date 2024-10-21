@@ -1,10 +1,15 @@
 //@import "_variables.scss";
 @import "_variables.scss";
 
+
+
 .cover {
+    //z-index: 20;
+    //top: -64px;
     position: relative;
     //height: 100vh;
-    min-height: 400px;
+    //min-height: 400px;
+    min-height: 100vh;
     background-color: rgb(30, 41, 59);
     opacity: 1;
     display: flex; 
@@ -12,7 +17,16 @@
     align-items: center;
     border: 0px solid red;
     color: #fff;
+    padding-top: 5%;
+    flex-direction: column;
     //background-blend-mode: darken;
+
+    .stripes {
+        height: 24px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
 
     .img {
         background-blend-mode: lighten;
@@ -39,6 +53,6 @@
     .layoutDefault {
     //.is-layout-constrained > .alignwide {
         max-width: $layout-wide-size;
-        border: 1px solid red;
+        border: 0px solid red;
     }
 }

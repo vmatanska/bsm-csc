@@ -51,9 +51,9 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
         return (
           <CallToActionButton
             key={block.id}
-            buttonLabel={block.attributes.data.label}
-            destination={block.attributes.data.destination || "/"}
-            align={block.attributes.data.align}
+            buttonLabel={block.attributes.data?.label}
+            destination={block.attributes.data?.destination || "/"}
+            align={block.attributes.data?.align}
           />
         );
       }
@@ -358,6 +358,13 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
           >
             <BlockRenderer blocks={block.innerBlocks} previousPost={previousPost} nextPost={nextPost} />
           </Cover>
+        );
+      }
+      
+      case "core/read-more": {
+        console.log("Component BlockRenderer block core/READMORE: ", block);
+        return (
+          <div style={{width: "100%", margin: "auto", textAlign: "center"}}><a href={block.attributes.className}>READ MORE</a></div>
         );
       }
       case "core/columns": {

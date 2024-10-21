@@ -1,8 +1,9 @@
 // Core Styles
-//@import "_variables.scss";
+@import "_variables.scss";
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     
     @media only screen and (max-width: $bp-largest) {
         font-size: 75%;
@@ -12,7 +13,54 @@ html {
 * {
     box-sizing: border-box;
 }
+/*
+html, body {
+    height: 100%;
+}*/
+body {
+    //--wp--preset--spacing--20: min(12px, 2vw);
+    //--wp--preset--spacing--30: min(40px, 4vw);
+    //background-color: #4c4c4c;
+    background-color: $background-color;
+    //font-family: $font-secondary;
+    //padding: 5%;
+    //margin: 0;
+    /*color: $font-color; //$color-grey-dark-2;
+    font-family: $font-body-ff;
+    font-size: $font-body-fs;
+    line-height: $font-body-lh;
+    font-weight: $font-body-fw;
+    letter-spacing: $font-body-ls;
+    text-transform: $font-body-tt;*/
 
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: "Frutiger Pro",Verdana,Arial,Helvetica,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+}
+#MainMenu {
+    //width: 960px;
+    height: 160px !important;
+}
+#Header, .full-height {
+    //width: 960px;
+    height: 100% !important;
+}
+
+.layout-content {
+    //max-width: $layout-content-size;
+    position: relative;
+    width: $layout-content-size;
+    margin-left: auto;
+    margin-right: auto;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center; //baseline;*/
+    border: 0px solid yellowgreen;
+}
 .text-center { text-align: center; }
 
 .max-w-5xl {
@@ -33,22 +81,6 @@ img, video {
     margin: auto;
 }
 
-body {
-    //--wp--preset--spacing--20: min(12px, 2vw);
-    //--wp--preset--spacing--30: min(40px, 4vw);
-    //background-color: #4c4c4c;
-    background-color: $background-color;
-    //font-family: $font-secondary;
-    //padding: 5%;
-    //margin: 0;
-    /*color: $font-color; //$color-grey-dark-2;
-    font-family: $font-body-ff;
-    font-size: $font-body-fs;
-    line-height: $font-body-lh;
-    font-weight: $font-body-fw;
-    letter-spacing: $font-body-ls;
-    text-transform: $font-body-tt;*/
-}
 
 /*h1 {
     var(--font-h1-fs);
@@ -71,4 +103,49 @@ body {
 .center {
     margin: auto;
     text-align: center;
+}
+
+
+.link-default { 
+    @include link-basic-underline();
+    //@extend .btn-def;
+}
+.link-accent-color {
+    @include link-accent-color($accent);
+}
+.animated-underline-type {
+    @include animated-underline-type($accent, $underline-thickness, $animated-underline-transition-sec);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    //font-family: $font-primary;
+    color: $color-grey-dark-3;
+}
+
+h1 {
+    font-family: $font-h1-ff;
+    font-size: $font-h1-fs;
+    line-height: $font-h1-lh;
+    font-weight: $font-h1-fw;
+    letter-spacing: $font-h1-ls;
+    text-transform: $font-h1-tt;
+}
+h1 {
+    font-size: clamp(2rem, 1rem + 10vw , 5rem);
+    color: $accent;
+}
+
+
+.page-title {
+    /*font-family: $font-page-title-ff;
+    font-size: $font-page-title-fs;
+    line-height: $font-page-title-lh;
+    font-weight: $font-page-title-fw;
+    letter-spacing: $font-page-title-ls;
+    text-transform: $font-page-title-tt;*/
 }

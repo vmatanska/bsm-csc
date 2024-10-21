@@ -1,20 +1,41 @@
-//@import "_variables.scss";
+@import "_variables.scss";
+@import '_mixins.scss';
+
+.hideSticky {
+    top: -160px;
+    opacity: 0;
+}
+.showSticky {
+    top: 0 !important;
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: all .3s ease-out;
+}
+
 .wrap {
     //background-color: rgb(30, 41, 59);
     background-color: #fff;
-    padding-left: 1.25rem/* 20px */;
-    padding-right: 1.25rem;
+    //padding-left: 1.25rem/* 20px */;
+    //padding-right: 1.25rem;
     height: 4rem/* 64px */;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
+    top: -160px;
+    opacity: 0;
     z-index: 20;
     color: #012346 !important;
     display: flex;
-    border-bottom: 3px solid #012346;
+    /*border-bottom: 3px solid #012346;*/
 
+    .icon { 
+        border: 1px solid red;
+        background-color: blue;
+        width: 40px;
+        height: 40px;
+    }
     .logo {
-        padding-top: 1rem/* 16px */;
-        padding-bottom: 1rem/* 16px */;
+        //padding-top: 1rem/* 16px */;
+        //padding-bottom: 1rem/* 16px */;
         display: flex;
         color: #e42624 ;
         a {
@@ -29,17 +50,47 @@
     .menuLinks a {
         padding: 20px !important; font-size: 25px !important;
     }
+    @media print, screen and (max-width: 1000px) {
+        .menuLinks { display: none !important; }
+    }
+    @media print, screen and (min-width: 1000px) {
+        .menuLinks { display: block; }
+    }
+
+    .menuIcon { 
+        display: none !important;
+        border: 3px solid red; 
+        //display: inline-flex;
+        align-items: center;
+        //visibility: hidden;
+    }
+    @media print, screen and (max-width: 1000px) {
+        .menuIcon { display: inline-block !important; }
+    }
+    @media print, screen and (min-width: 1000px) {
+        .menuIcon { display: none !important; }
+    }
 
     .hidden {
         display: none;
     }
+
     .hover:hover {
         opacity: 1;
         background-color: #f2f2f2;
         color: #e42624;
         cursor: pointer;
         position: relative;
+        z-index: 20;
+        @include animated-underline-type ($accent, $underline-thickness, $animated-underline-transition-sec);
     }
+    /*.hover:hover {
+        opacity: 1;
+        background-color: #f2f2f2;
+        color: #e42624;
+        cursor: pointer;
+        position: relative;
+    }*/
     .group:hover .group-hover\:block {
         display: block;
     }

@@ -168,7 +168,7 @@ export const theme2 = {
 	
 		"layout": {
             "contentSize": "1200px",
-            "wideSize": "1580px"
+            "wideSize": "1920px"
         },
 		"spacing": {
 			"spacingScale": {
