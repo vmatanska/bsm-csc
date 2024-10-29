@@ -1,7 +1,13 @@
-import styles from './Footer.module.scss';
+import Link from "next/link";
+import Image from "next/image";
+import styles from './SiteLogo.module.scss';
 
-export const Footer = ({ className, style, layout, backgroundColor}) => {
+export const SiteLogo = ({ alt, className, url, id }) => {
   
+    console.log('Component SITELOGO id === ', id);
+    console.log('Component SITELOGO alt === ', alt);
+    console.log('Component SITELOGO className === ', className);
+    console.log('Component SITELOGO url === ', url);
     /*const spacingStyle = spacing ? getSpacing(spacing) : {};
     const fontSizeStyle = fontSize ? { fontSize: `${getFontSizeForParagraph(fontSize)}` } : {};
     const fontSizeCustomStyle = fontSizeCustom ? { fontSize: fontSizeCustom } : {};
@@ -20,12 +26,13 @@ export const Footer = ({ className, style, layout, backgroundColor}) => {
 class="wp-block-separator has-text-color has-contrast-3-color has-alpha-channel-opacity has-contrast-3-background-color has-background is-style-wide"
 <div className={s['header-inner']}> </div>
 <hr className={styles["`${className}`"]} backgroundColor={backgroundColor} />
-<hr className={styles[`${className}`]} backgroundColor={backgroundColor} />*/
-    //console.log('Component FOOTER props === ', props);
-    console.log('Component FOOTER {styles["`${className}`"]} === ', `${className}`);
+*/
+    //console.log('Component SITELOGO {styles["`${className}`"]} === ', `${className}`);
     return (     
-        <div className={styles.stripes} style={{backgroundImage: "url(/images/stripes.svg)"}}>
-            {/*children*/} Footer
-        </div>
+        <Link className={styles.className} href="/">
+            <div className={styles.image}>
+                <Image src={url} height="38" width="100" coverr="true" alt={alt} />
+            </div>     
+        </Link>
     );
 };

@@ -1,7 +1,109 @@
-.border { 
-    border: 3px solid red; 
+.wrap { 
+    border: 0px solid red; 
     z-index: 100;
     width: 100%;
+    height: 100vh;
     color: #fff;
-    background-color: blueviolet;
+    background-color: #00396f;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+
+    .wrapLeft {
+        border: 1 px solid yellow;
+        background-color: #012346;
+        height: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+    .wrapRight {
+        border: 0 solid rgb(255, 0, 221);
+        height: 100%;
+        width: 100%;
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-top:30px;
+        padding-bottom:30px;
+        position: relative;
+
+        .topRow { 
+            border: 0px solid pink;
+            display: flex;         
+            justify-content: flex-end;
+            align-items: center;
+
+            .closeIcon { margin-left: 15px; /*absolute left-0 p-5*/ }
+        }
+        .bottomRow { 
+            border: 0px solid pink;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+           .socMed {
+            display: block !important;
+            margin-left: 30px;
+           }
+        }
+ 
+
+        .liMenu {
+            position: relative; text-wrap: nowrap;
+            z-index: 999;
+        }   
+        .menuLinks a {
+            font-size: 17px; padding: 8px 0; display: block; white-space: nowrap; line-height: 1; transition: .3s ease-in-out; border: 0px solid red;
+        }
+        .menuLinks .group .is-dropdown-submenu-parent:after{
+            content: "";
+            margin: 0 0.5em;
+            display: inline-block;
+            border: 7px solid transparent;
+            //border-top: 8px solid #ffffff;
+            border-top: 8px solid #ffffff;
+            border-bottom: 0 none;
+        }
+        .hidden {
+            display: none;
+        }
+        .hover:hover {
+            opacity: 1;
+            background-color: transparent; /* #f2f2f2; */
+            color: #77cbea; /*#e42624;*/
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+            text-decoration: none;
+            //border-bottom: 1px solid white;
+            //text-decoration: underline;
+            // @include animated-underline-type (#fff, $underline-thickness, $animated-underline-transition-sec);
+        }
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+        .subMenuItems {
+            display: none;        
+            border: 0px solid yellow;
+            text-align: left;
+            color: #299dd8;
+            background-color:  #00203d; /*rgb(234, 236, 241);*/
+            //position: absolute;
+            right: 0;
+            top: 100%;
+            //left: 80px;
+            z-index: 8000 !important;
+            margin-top: -0.75rem;
+            //margin-top: 0; /*-0.75rem;20px;-12px */
+            padding: 20px;
+            border-top: 2.5px solid #299dd8;
+
+            a { 
+                padding: 8px 0;
+            }
+        }
+    }
 }

@@ -3,7 +3,8 @@ import { Heading } from "components/Heading";
 import { Group } from "components/Group";
 import { Paragraph } from "components/Paragraph";
 import { PostContent } from "components/PostContent";
-import { CallToActionButton } from "../CallToActionButton/CallToActionButton";
+//import { CallToActionButton } from "../CallToActionButton/CallToActionButton";
+import { CallToActionButton } from "components/CallToActionButton";
 import { Columns } from "components/Columns";
 import { Column } from "components/Column";
 import { Spacer } from "components/Spacer";
@@ -12,10 +13,12 @@ import { NewsSearch } from "components/NewsSearch";
 //import { PostDate } from "components/PostDate";
 import { NewsFeatures } from "components/NewsFeatures";
 import { PostNavigationLink } from "components/PostNavigationLink";
+import { SiteLogo } from "components/SiteLogo";
 
 import Image from "next/image";
 import { theme } from "theme";
 import { theme2 } from "theme2";
+import { Footer } from "../Footer/Footer";
 
 //const BlockRenderer = (props) => {
 const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
@@ -75,9 +78,11 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
           />
         );
       }
+
+      case "core/group":  // reusable component
       case "core/pattern":
       case "core/template-part":
-      case "core/group": {
+      case "core/block": {
         console.log("Component BlockRenderer block core/group-111: ", block);
         console.log(
           "Component BlockRenderer block core/group theme[block.attributes.backgroundColor]: ",
@@ -92,8 +97,13 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
           "Component BlockRenderer block core/group block.attributes.backgroundColor: ",
           block.attributes?.backgroundColor
         );
-
+        console.log(
+          "Component BlockRenderer block core/block block.attributes.ref: ",
+          block.attributes?.ref
+        );
+{/* block.attributes?.ref === 329 ? <Footer className="fwefwefw"> : "", */}
         return (
+          
           <Group
             key={block.id}
             background={block.attributes?.url}
@@ -112,12 +122,20 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
             spacing={block.attributes?.style?.spacing}
             //backgroundColor={theme[block.attributes.backgroundColor] || block.attributes.style?.color?.background }
           >
-            <BlockRenderer blocks={block.innerBlocks} previousPost={previousPost} nextPost={nextPost} />
+            <BlockRenderer key={block.id} blocks={block.innerBlocks} previousPost={previousPost} nextPost={nextPost} 
+              textColor={
+                theme[block.attributes.textColor] ||
+                block.attributes.style?.color?.text
+              }
+              backgroundColor={
+                theme[block.attributes.backgroundColor] ||
+                block.attributes.style?.color?.background
+              } />
           </Group>
         );
       }
 
-      case "core/group":
+      /*case "core/group": // reusable component
       case "core/block": {
         console.log(
           "Component BlockRenderer block core/group-222 || core/block: ",
@@ -141,10 +159,10 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
             }
             previousPost={previousPost} 
             nextPost={nextPost}
-            /*backgroundColor={block.attributes.backgroundColor}*/
+            /*backgroundColor={block.attributes.backgroundColor}*//*
           />
         );
-      }
+      }*/
 
       case "core/post-content": {
         console.log("Component BlockRenderer block core/post-content: ", block);
@@ -264,6 +282,10 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
         );
       }
 
+      case "core/site-logo": {
+        console.log("Component BlockRenderer block core/site-logo: ", block);
+        return <SiteLogo key={block.id} alt={block.attributes.alt} className={block.attributes.className} url={block.attributes.url} id={block.attributes.id} />;
+      }
       case "core/spacer": {
         console.log("Component BlockRenderer block core/spacer: ", block);
         return <Spacer key={block.id} height={block.attributes.height} />;
@@ -384,6 +406,7 @@ const BlockRenderer = ({ blocks, previousPost, nextPost }) => {
         return (
           <Columns
             key={block.id}
+            classNm={block.attributes?.className ? block.attributes?.className : ""}
             isStackedOnMobile={block.attributes.isStackedOnMobile}
             textColor={
               theme[block.attributes.textColor] ||

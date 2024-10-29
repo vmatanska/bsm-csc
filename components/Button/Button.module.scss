@@ -3,10 +3,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-
-
-
-
 .btnDef { 
   cursor: pointer;   
   width: max-content;
@@ -64,5 +60,36 @@
     color: #ffffff;
     border-color: #ffffff;
     background-color: $accent-4;
+  }
+}
+
+.btn-bsm {
+  @extend .btnDef;
+  //color: $accent-4;
+  //border: 1px solid $accent-4;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  //padding: .8rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: background-color .25s ease-out, color .25s ease-out;
+  font-family: "Frutiger Pro", Verdana, Arial, Helvetica, sans-serif;
+  //font-size: .9rem;
+  -webkit-appearance: none;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-size: 19px;
+  background: #e20613;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    //border-color: #ffffff;
+    //background-color: $accent-4;
+    background: #880d27;
   }
 }

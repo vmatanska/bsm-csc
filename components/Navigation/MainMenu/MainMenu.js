@@ -12,7 +12,12 @@ export const MainMenu = ({items, callToActionLabel, callToActionDestination, log
     console.log("Main Menu Component: ", items);
 
     return (
-        <div id="MainMenu" style={{paddingTop:"30px"}} className={styles["wrap"] + " " + /*styles[`${state}`] +*/ ` top-nav  `} >
+        <div id="MainMenu"  className={styles["wrap"] + " " + ` top-nav  `} style={{        
+            opacity: `${isOpen ? "0" : "1"}`,
+            top: ` ${isOpen ? "-100%" : "0"}`,
+        }}>
+
+        
             <div class="layout-content" style={{display:"flex", justifyContent: "space-between", alignItems: "center"}}>            
                 <Link href="/"  className={styles.logo}>
                     <Image
@@ -39,38 +44,33 @@ export const MainMenu = ({items, callToActionLabel, callToActionDestination, log
             </div>          
             <div class="layout-content" style={{display:"flex", justifyContent: "space-between", alignItems: "center"}}>
                 <div><span>Crew Service Centre</span></div>
-                {/*<div style={{display: "inline-flex"}}>*/}
-                    <div className={styles.menuLinks} style={{display:"flex", flex: "1 1 0%", justifyContent: "right"}}>
-                        {(items || []).map(item => (
-                            <div key={item.id} style={{position: "relative"}} className={styles["hover"] + " " + styles["group"]} class="animated-underline-type">
-                                <div style={{textWrap: "nowrap"}}>
-                                    <Link href={item.destination} style={{padding: "20px", display: "block", border: "0px solid red"}}
-                                             className={!!item.subMenuItems?.length && (styles["is-dropdown-submenu-parent"] + " " + styles["triangle"])}>
-                                        {item.label}
-                                    </Link>
-                                </div>
-                                {console.log("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV = ", item.subMenuItems, "LENGHT = ", item.subMenuItems.length)}
-                                {!!item.subMenuItems?.length && (
-                                    <div className={styles["subMenuItems"] + " " + styles["group-hover:block"]} style={{}}>
-                                        {item.subMenuItems.map(subMenuItem => (
-                                            <Link key={subMenuItem.id} href={subMenuItem.destination} className={styles.hover} style={{display: "block", whiteSpace: "nowrap", padding: "20"}}>
-                                                {subMenuItem.label}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-
-                        <Button type link={callToActionDestination}  btnStyle="btn-slightly-round" style={{padding:"20px !important", fontSize: "25px !important"}}>{callToActionLabel}</Button>
-                        {/*<div className={styles.cta}>
-                            <Link href={callToActionDestination} className={styles.ctaContent}>
-                                {callToActionLabel}
+            
+                <ul className={styles.menuLinks} style={{display:"flex", flex: "1 1 0%", justifyContent: "right"}}>
+                    {(items || []).map(item => (
+                        <li key={item.id}  className={styles["hover"] + " " + styles["group"] + " " + styles["liMenu"]} /*class="animated-underline-type"*/>                          
+                            <Link href={item.destination}  style={{ marginLeft: "20px", display: "block", border: "0px solid red"}} className={!!item.subMenuItems?.length ? (styles["is-dropdown-submenu-parent"]) : ""}>
+                                {item.label}
                             </Link>
-                        </div>*/}
-                    </div>  
-                    
-                {/*</div> display: "inline-flex" */}
+                            
+                            {/*console.log("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV = ", item.subMenuItems, "LENGHT = ", item.subMenuItems.length)*/}
+                            {!!item.subMenuItems?.length && (
+                                <ul>
+                                    <li className={styles["subMenuItems"] + " " + styles["group-hover:block"]} style={{}}>
+                                        {item.subMenuItems.map(subMenuItem => (                                         
+                                            <Link key={subMenuItem.id} href={subMenuItem.destination} className={styles.hover}>
+                                                {subMenuItem.label}
+                                            </Link> 
+                                        ))}
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
+                    ))}
+
+                    {/*<Button type link={callToActionDestination}  btnStyle="btn-slightly-round" style={{padding:"20px !important", fontSize: "25px !important"}}>{callToActionLabel}</Button>*/}
+
+                </ul>  
+
             </div>         
         </div>
   

@@ -1,8 +1,6 @@
 //@import "_variables.scss";
 @import "_variables.scss";
 
-
-
 .cover {
     //z-index: 20;
     //top: -64px;
@@ -26,15 +24,25 @@
         width: 100%;
         position: absolute;
         bottom: 0;
+        background-image: "url(/images/stripes.svg)"
     }
 
     .img {
         background-blend-mode: lighten;
         opacity: 0.4;
+        object-fit: cover;
         //background-blend-mode: multiply;
         //background-color: rgb(30, 41, 59);
         //background-blend-mode: darken;
         //object-fit: cover;
+    }
+
+    .arrowDown {
+        padding: 20px; 
+        display: block; 
+        margin: auto; 
+        text-align: center; 
+        background-image: url(/images/arrow-down);
     }
 
     .heading {

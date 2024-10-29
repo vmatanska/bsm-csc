@@ -1,7 +1,7 @@
 import Link from "next/link";
 //import styles from './ButtonLink.module.scss';
 
-import classes from './Button.module.scss';
+import styles from './Button.module.scss';
 
 /*export const ButtonLink = (destination, label) => {
     console.log("ButtonLink Component: destination = ", destination, "   label", label)
@@ -18,29 +18,34 @@ import classes from './Button.module.scss';
 
 export const Button = (props) => {
   console.log('BUTTON COMPONNENT props === ', props);
-  //console.log('BUTTON COMPONNENT props.btnStyle === ', props.btnStyle);
-  if (props.type && (props.type !== 'submit')){
-    
-    if (props.link /*&& (props.type!=='submit')*/) {
-      return (
-        <Link href={props.link} className={classes[props.btnStyle]}> 
-          {props.children}
-        </Link>
-      );
-    }
+  console.log('BUTTON COMPONNENT props TYPE === ', props.type);
+  console.log('BUTTON COMPONNENT props DESTINATION === ', props.destination);
+  console.log('BUTTON COMPONNENT props.btnStyle === ', props.btnStyle);
 
+  if (props.destination){
+
+    console.log('BUTTON COMPONNENT IF props.destination ');
     return (
-      <button className={classes[props.btnStyle]} type={props.type ? 'submit' : 'button'} onClick={props.onClick}>
+      <Link href={props.destination} className={styles[props.btnStyle]}> 
         {props.children}
-      </button>
+        {props.label}
+      </Link>
     );
+  
+    return (
+      <button className={styles[props.btnStyle]} type={props.type ? 'submit' : 'button'} onClick={props.onClick}>
+        {props.children}
+        {props.label}
+      </button>
+    );{/**/}
 
   } else {
-
-    return (
-    
-      <button className={classes[props.btnStyle] + ' ' + classes[props.btnStyle]} type={props.type ? 'submit' : 'button'}>
+    console.log('BUTTON COMPONNENT ELSE (IF props.destination) ');
+    return (  
+      <button className={styles[props.btnStyle]} type={props.type ? 'submit' : 'button'}>
         {props.children}
+        {props.destination}
+        {props.label}
       </button>
     );
   }

@@ -34,7 +34,7 @@ export const MainMenu = ({items, callToActionLabel, callToActionDestination, log
                                     {item.label}
                                 </Link>
                             </div>
-                            {console.log("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV = ", item.subMenuItems, "LENGHT = ", item.subMenuItems.length)}
+                            {/*console.log("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV = ", item.subMenuItems, "LENGHT = ", item.subMenuItems.length)*/}
                             {!!item.subMenuItems?.length && (
                                 <div className={styles["subMenuItems"] + " " + styles["group-hover:block"]} style={{}}>
                                     {item.subMenuItems.map(subMenuItem => (

@@ -3,7 +3,8 @@ import { FontAwesome, FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaBars, FaArrowDown, FaArrowDownLong, FaAlignJustify, FaArrowRight, FaArrowLeft, FaLongArrowLeft, FaLongArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import Image from 'next/image';
-import {stripes} from '/public/images/stripes.svg';
+import { arrowDown } from '/public/images/arrow-down.svg';
+import { stripes } from '/public/images/stripes.svg';
 import { getFontLavelForHeading, getFontSizeForHeading, getTextAlign, getSpacing } from "../../utils/fonts";
 import {  hexToRgba } from "../../utils/hexToRgba";
 
@@ -71,7 +72,7 @@ export const Cover = ({children, background, customGradient, dimRatio, fontSize,
     return( 
         <div id="Header" className={styles.cover + " " + `${layoutTypeStyleClass}`} 
                         style={{...customGradientStyle, ...dimRatioStyle, ...fontSizeStyle, 
-                                ...widthStyle, /*...heightStyle, ...minHeightStyle,*/
+                                /*...widthStyle, ...heightStyle, ...minHeightStyle,*/
                                 ...customOverlayColorStyle, ...textColorStyle, ...layoutStyle
                         }}>
 
@@ -79,23 +80,18 @@ export const Cover = ({children, background, customGradient, dimRatio, fontSize,
             <Image
                 alt="Cover"
                 src={background}
-                fill
-                style={{objectFit:"cover"}}
+                fill="true"
                 className={styles.img}
             />
             )}
             
             <div class="layout-content">
-                <div className={styles.heading}>{children}</div> {/*className="max-w-5xl z-10"*/}
-                
-                <a href="#mission_vision" style={{padding: "20px", display: "block", margin: "auto", textAlign: "center"}}>
+                <div className={styles.heading}>{children}</div> {/*className="max-w-5xl z-10"*/}              
+                <a href="#mission_vision" className={styles.arrowDown}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style={{width: "17px", marginBottom: "12px"}}>
-                    <path fill="#ffffff" d="M315.3 363.3l-144 144C168.2 510.4 164.1 512 160 512s-8.188-1.562-11.31-4.688l-144-144c-6.25-6.25-6.25-16.38 0-22.62s16.38-6.25 22.62 0L144 457.4V16C144 7.156 151.2 0 160 0s16 7.156 16 16v441.4l116.7-116.7c6.25-6.25 16.38-6.25 22.62 0S321.6 357.1 315.3 363.3z"></path>
+                        <path fill="#ffffff" d="M315.3 363.3l-144 144C168.2 510.4 164.1 512 160 512s-8.188-1.562-11.31-4.688l-144-144c-6.25-6.25-6.25-16.38 0-22.62s16.38-6.25 22.62 0L144 457.4V16C144 7.156 151.2 0 160 0s16 7.156 16 16v441.4l116.7-116.7c6.25-6.25 16.38-6.25 22.62 0S321.6 357.1 315.3 363.3z"></path>
                     </svg>
                 </a>
-
-                {/*<FontAwesomeIcon icon="fa-solid fa-bars" /><FaBars/>
-                <i class="fa-solid fa-bars"></i>*/}
             </div>
             <div id="mission_vision" className={styles.stripes} style={{backgroundImage: "url(/images/stripes.svg)"}}></div>
         </div>

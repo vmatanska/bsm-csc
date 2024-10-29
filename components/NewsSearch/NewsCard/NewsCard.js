@@ -12,7 +12,7 @@ export const NewsCard = ({/*key,*/ title, link, excerpt, published, author, tags
   
     return <Link className={styles.card} href={link}>
                 <div className={styles.image}>
-                    <Image src={image} height="200" width="300" cover alt="" />
+                    <Image src={image} height="200" width="300" cover="true" alt="" />
                 </div>
                 <div className={styles.info}>
                     <div className={styles.date}>{published}</div>

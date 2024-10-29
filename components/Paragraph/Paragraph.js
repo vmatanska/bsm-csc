@@ -18,7 +18,7 @@ export const Paragraph = ({ textAlign = "left", content, textColor, fontSize, fo
 
     return (
         <p
-            className={`max-w-5xl mx-auto ${getTextAlign(textAlign)}`}
+            className={`la-la lala-la ${getTextAlign(textAlign)}`}
             style={{color: textColor, fontSize: fontSizeStyle.fontSize, fontSize: fontSizeCustomStyle.fontSize, spacingStyle, lineHeight: lineHeightStyle.lineHeight}}
             dangerouslySetInnerHTML={{ __html: relativeToAbsoluteUrls(content) }}
         />      
